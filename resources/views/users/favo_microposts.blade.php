@@ -15,8 +15,8 @@
                         <p class="mb-0">{!! nl2br(e($favorite->content)) !!}</p>
                     </div>
                     <div>
-                        {!! Form::open(['route' => ['favorites.unfavorite', $favorite->id]]) !!}
-                            {!! Form::submit('Unfavorite', ['class' => 'btn btn-light btn-sm']) !!}
+                        {!! Form::open(['route' => ['favorites.unfavorite', $favorite->id], 'method' => 'delete']) !!}
+                            {!! Form::submit('Unfavorite', ['class' => 'btn btn-success btn-sm']) !!}
                         {!! Form::close() !!}
                     </div>
                     <div>
